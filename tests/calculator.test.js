@@ -18,6 +18,9 @@ describe('Calculator Tests', function () {
 
         capabilities['appium:udid'] =
             execSync('adb get-serialno').toString().trim();
+            
+            console.log('HOST=', process.env.APPIUM_HOST);
+            console.log('PORT=', process.env.APPIUM_PORT);
 
         driver = await remote({
             hostname: process.env.APPIUM_HOST,
