@@ -23,11 +23,11 @@ describe('Calculator Tests', function () {
             console.log('PORT=', process.env.APPIUM_PORT);
 
             driver = await remote({
-                hostname: '127.0.0.1',
-                port: 4723,
-                path: '/',
-                capabilities
-            });
+            hostname: process.env.APPIUM_HOST,
+            port: Number(process.env.APPIUM_PORT),
+            path: '/',
+            capabilities
+        });
     });
 
     after(async function () {
