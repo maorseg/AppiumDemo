@@ -1,14 +1,27 @@
-name: Appium Local
+name: Appium Tests
 
 on:
   workflow_dispatch:
 
 jobs:
-  test:
+  run-tests:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - run: npm install
-      - run: npm run tests_with_reports
+      - name: Verify Node
+        run: node -v
+
+      - name: Verify NPM
+        run: npm -v
+
+      - name: Verify Device
+        run: adb devices
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run tests_with_reports
