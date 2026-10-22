@@ -1,0 +1,28 @@
+{
+  "calculatorTests": [
+    {
+      "firstNumber": 3,
+      "operation": "plus",
+      "secondNumber": 2,
+      "expectedResult": "5"
+    },
+    {
+      "firstNumber": 7,
+      "operation": "minus",
+      "secondNumber": 2,
+      "expectedResult": "5"
+    },
+    {
+      "firstNumber": 4,
+      "operation": "multiply",
+      "secondNumber": 3,
+      "expectedResult": "12"
+    },
+       {
+      "firstNumber": 9,
+      "operation": "divide",
+      "secondNumber": 3,
+      "expectedResult": "3"
+    }
+  ]
+}

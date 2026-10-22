@@ -1,0 +1,8 @@
+node_modules/
+reports/
+mochawesome-report/
+.env
+*.log
+allure-results/
+allure-report/
+screenshots/

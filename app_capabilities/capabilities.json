@@ -1,0 +1,8 @@
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:deviceName": "Android",
+  "appium:noReset": true,
+  "appium:appPackage": "com.sec.android.app.popupcalculator",
+  "appium:appActivity": "com.sec.android.app.popupcalculator"
+}

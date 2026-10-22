@@ -1,0 +1,20 @@
+{
+  "calculator": {
+    "number0": "id=calc_keypad_btn_00",
+    "number1": "id=calc_keypad_btn_01",
+    "number2": "id=calc_keypad_btn_02",
+    "number3": "id=calc_keypad_btn_03",
+    "number4": "id=calc_keypad_btn_04",
+    "number5": "id=calc_keypad_btn_05",
+    "number6": "id=calc_keypad_btn_06",
+    "number7": "id=calc_keypad_btn_07",
+    "number8": "id=calc_keypad_btn_08",
+    "number9": "id=calc_keypad_btn_09",
+    "plus": "id=calc_keypad_btn_add",
+    "minus": "id=calc_keypad_btn_sub",
+    "multiply": "id=calc_keypad_btn_mul",
+    "divide": "id=calc_keypad_btn_div",
+    "equals": "id=calc_keypad_btn_equal",
+    "result": "id=calc_edt_formula"
+  }
+}
