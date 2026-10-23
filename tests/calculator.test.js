@@ -30,6 +30,7 @@ before(async function () {
     path: '/',
     capabilities
 });
+});
 
     after(async function () {
         if (driver) {
