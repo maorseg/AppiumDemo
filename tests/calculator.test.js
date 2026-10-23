@@ -14,21 +14,23 @@ describe('Calculator Tests', function () {
 
     let driver;
 
-    before(async function () {
+before(async function () {
 
-        capabilities['appium:udid'] =
-            execSync('adb get-serialno').toString().trim();
-            
-            console.log('HOST=', process.env.APPIUM_HOST);
-            console.log('PORT=', process.env.APPIUM_PORT);
+    console.log('CWD=', process.cwd());
+    console.log('HOST=', process.env.APPIUM_HOST);
+    console.log('PORT=', process.env.APPIUM_PORT);
 
-            driver = await remote({
-            hostname: process.env.APPIUM_HOST,
-            port: Number(process.env.APPIUM_PORT),
-            path: '/',
-            capabilities
-        });
+    capabilities['appium:udid'] =
+        execSync('adb get-serialno').toString().trim();
+
+    driver = await remote({
+        protocol: 'http',
+        hostname: process.env.APPIUM_HOST,
+        port: Number(process.env.APPIUM_PORT),
+        path: '/',
+        capabilities
     });
+});
 
     after(async function () {
         if (driver) {
