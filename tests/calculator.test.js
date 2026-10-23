@@ -1,3 +1,4 @@
+console.log('*** CALCULATOR TEST VERSION 1.0 ***');
 require('dotenv').config();
 const { remote } = require('webdriverio');
 const { expect } = require('chai');
@@ -23,13 +24,13 @@ before(async function () {
     capabilities['appium:udid'] =
         execSync('adb get-serialno').toString().trim();
 
-   driver = await remote({
-    protocol: 'http',
-    hostname: '127.0.0.1',
-    port: 4723,
-    path: '/',
-    capabilities
-});
+    driver = await remote({
+        protocol: 'http',
+        hostname: process.env.APPIUM_HOST,
+        port: Number(process.env.APPIUM_PORT),
+        path: '/',
+        capabilities
+    });
 });
 
     after(async function () {
