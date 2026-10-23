@@ -23,13 +23,12 @@ before(async function () {
     capabilities['appium:udid'] =
         execSync('adb get-serialno').toString().trim();
 
-    driver = await remote({
-        protocol: 'http',
-        hostname: process.env.APPIUM_HOST,
-        port: Number(process.env.APPIUM_PORT),
-        path: '/',
-        capabilities
-    });
+   driver = await remote({
+    protocol: 'http',
+    hostname: '127.0.0.1',
+    port: 4723,
+    path: '/',
+    capabilities
 });
 
     after(async function () {
